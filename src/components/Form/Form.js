@@ -1,12 +1,24 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 import firebaseDB from '../../api/firebase';
 import './Form.less';
+
+/**
+ * Форма для отправки сообщения
+ *
+ * @component
+ * @param {func} onSend Функция отправки сообщения
+ */
 
 const Form = ({onSend}) => {
     const [text, setText] = useState('');
     const [name, setName] = useState('');
 
+    /**
+     * Отправка сообщения
+     * @function
+     */
     const onSubmit = () => {
         if (text && name) {
             onSend(text, name);
@@ -18,6 +30,10 @@ const Form = ({onSend}) => {
         }
     };
 
+    /**
+     * Отправка сообщения по нажатию Enter
+     * @param {object} event объект события
+     */
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
@@ -25,10 +41,18 @@ const Form = ({onSend}) => {
         }
     };
 
+    /**
+     * Изменение текста сообщения в форме
+     * @param {object} event объект события
+     */
     const updateText = (event) => {
         setText(event.target.value);
     };
 
+    /**
+     * Изменение имени пользователя в форме
+     * @param {object} event объект события
+     */
     const updateName = (event) => {
         if (event.target.value !== name) {
             setName(event.target.value)
@@ -57,8 +81,12 @@ const Form = ({onSend}) => {
     );
 };
 
+Form.propTypes = {
+    onSend: PropTypes.func.isRequired
+};
+
 Form.defaultProps = {
     onSend: () => {}
-}
+};
 
 export default Form;

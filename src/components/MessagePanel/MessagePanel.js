@@ -5,6 +5,14 @@ import './MessagePanel.less';
 import MessageList from "../MessageList/MessageList";
 import Form from "../Form/Form";
 
+/**
+ * Панель для сообщений
+ *
+ * @component
+ * @param {object} messages Объект с сообщениями
+ * @param {func} onSendMessage Функция отправки и отображения сообщения
+ */
+
 const MessagePanel = ({messages, onSendMessage}) => {
     return (
         <div className="MessagePanel-Form-container">
@@ -14,12 +22,12 @@ const MessagePanel = ({messages, onSendMessage}) => {
     );
 };
 
-MessagePanel.defaultProps = {
-    messages: {}
-};
-
 MessagePanel.propTypes = {
     messages: PropTypes.object.isRequired
+};
+
+MessagePanel.defaultProps = {
+    messages: {}
 };
 
 export default MessagePanel;

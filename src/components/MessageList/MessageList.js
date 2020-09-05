@@ -2,6 +2,13 @@ import React from 'react';
 
 import Message from "../Message/Message";
 
+/**
+ * Список сообщений
+ *
+ * @component
+ * @param {object} messages Объект с сообщениями
+ */
+
 const MessageList = ({messages}) => {
     return (
         <div className="MessagePanel-Form">

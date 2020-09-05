@@ -4,6 +4,12 @@ import MessagePanel from "./components/MessagePanel/MessagePanel";
 import './Chat.less';
 import firebaseDB from './api/firebase';
 
+/**
+ * Контейнерная компонента для чата
+ *
+ * @component
+ */
+
 const Chat = () => {
     const [messages, setMessages] = useState({});
 
@@ -17,7 +23,11 @@ const Chat = () => {
         })
     }, []);
 
-
+    /**
+     * Функция отправки и отображения сообщения
+     * @param {string} text Текст сообщения
+     * @param {string} name Имя пользователя
+     */
     const onSendMessage = (text, name) => {
         const newMessage = {
             text,
