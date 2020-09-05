@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import firebaseDB from '../../api/firebase';
 import './Form.less';
 
 const Form = ({onSend}) => {
@@ -9,6 +10,10 @@ const Form = ({onSend}) => {
     const onSubmit = () => {
         if (text && name) {
             onSend(text, name);
+            firebaseDB.push().set({
+                "name": name,
+                "text": text
+            });
             setText('')
         }
     };

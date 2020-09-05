@@ -15,11 +15,11 @@ const MessagePanel = ({messages, onSendMessage}) => {
 };
 
 MessagePanel.defaultProps = {
-    messages: []
+    messages: {}
 };
 
 MessagePanel.propTypes = {
-    messages: PropTypes.array.isRequired
+    messages: PropTypes.object.isRequired
 };
 
 export default MessagePanel;
