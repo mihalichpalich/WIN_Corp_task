@@ -9,6 +9,7 @@
     "@types/prop-types": "^15.7.3",
     "customize-cra": "^1.0.0",
     "firebase": "^7.19.1",
+    "firebase-tools": "^8.10.0",
     "prop-types": "latest",
     "react": "^16.13.1",
     "react-app-rewire-less": "^2.1.3",
