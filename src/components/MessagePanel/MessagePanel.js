@@ -15,8 +15,13 @@ import Form from "../Form/Form";
 
 const MessagePanel = ({messages, onSendMessage}) => {
     return (
-        <div className="MessagePanel-Form-container">
-            <MessageList messages={messages} onSend={onSendMessage}/>
+        <div className="MessagePanel-container">
+            {(Object.keys(messages).length === 0)
+                ?
+                    <span className="MessagePanel-LoadingMessage">Loading...</span>
+                :
+                    <MessageList messages={messages} onSend={onSendMessage}/>
+                }
             <Form onSend={onSendMessage}/>
         </div>
     );
