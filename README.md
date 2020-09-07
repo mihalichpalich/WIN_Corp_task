@@ -31,10 +31,6 @@
 
 ### `git clone https://github.com/mihalichpalich/win_corp_task.git`
 
-Установка на локальном компьютере:
+Установка и запуск на локальном компьютере:
 
-### `npm i`
-
-Запуск на локальном компьютере:
-
-### `npm start`
+### `cd win_corp_task && npm i && npm start`
