@@ -27,6 +27,10 @@
 
 <br />
 
+Скачать на локальный компьютер:
+
+### `git clone https://github.com/mihalichpalich/win_corp_task.git`
+
 Установка на локальном компьютере:
 
 ### `npm i`
